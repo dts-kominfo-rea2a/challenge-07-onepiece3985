@@ -6,8 +6,8 @@ const promiseOutput = async (yangDihitung)=>{
     let hasil=0;
     let arr1=await promiseTheaterIXX();
     let arr2=await promiseTheaterVGC();
-    let IXX=await arr1.filter(element=>element.hasil==yangDihitung);
-    let VGC=await arr2.filter(element=>element.hasil==yangDihitung);    
+    let IXX=arr1.filter(element=>element.hasil==yangDihitung);
+    let VGC=arr2.filter(element=>element.hasil==yangDihitung);    
     return IXX.length+VGC.length;
   }catch(err){
     return err;
